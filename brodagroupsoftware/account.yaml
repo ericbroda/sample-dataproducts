@@ -1,0 +1,27 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "account-dataproduct"
+  # namespace: broda-group-software
+  title: "Account Data Product 01"
+  description: "Broda Group Software sample account data product"
+  # labels:
+  # annotations:
+  tags: ["account", "party", "product", "transaction", "data-product"]
+  links:
+    - url: https://github.com/ericbroda/data-mesh-catalog/blob/main/dataproducts/account/specification-license.yaml
+      title: Documentation
+    - url: https://github.com/ericbroda/data-mesh-catalog/blob/main/dataproducts/account/specification-license.yaml
+      title: Getting Started Guide
+    - url: https://github.com/ericbroda/data-mesh-catalog/blob/main/dataproducts/account/specification-license.yaml
+      title: Sandboxes
+
+spec:
+  type: data-product
+  lifecycle: "experimental"
+  owner: "user:eric.broda"
+  system: "customer-analytics"
+  subcomponentOf: "parent-1"
+  providesApis: ["somePublishedAPI"]
+  consumesApis: ["someConsumedAPI"]
+  dependsOn: ["component:party-dataproduct", "component:product-dataproduct", "component:transaction-dataproduct"]

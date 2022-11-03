@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: sample-apis
+  description: A collection of sample APIs
+spec:
+  targets:
+    - ./brodagroupsoftware/account.yaml
+    - ./brodagroupsoftware/party.yaml
+    - ./brodagroupsoftware/product.yaml
+    - ./brodagroupsoftware/transaction.yaml
